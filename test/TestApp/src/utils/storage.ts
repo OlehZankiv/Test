@@ -5,6 +5,7 @@ export type StorageKey = 'IS_AUTH';
 export interface IStorage {
   get: <T>(key: StorageKey, defaultValue: T) => Promise<T>;
   put: <T>(key: StorageKey, value: T) => Promise<void>;
+  clear: () => Promise<void>;
 }
 
 export const Storage: IStorage = {
@@ -24,4 +25,5 @@ export const Storage: IStorage = {
       console.error('Set Storage Error: ', e);
     }
   },
+  clear: () => AsyncStorage.clear(),
 };
