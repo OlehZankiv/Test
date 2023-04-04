@@ -1,12 +1,12 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import React from 'react';
 import {WebsiteItem} from '../api';
-import {List, WebsiteScanner} from '../screens';
+import {List, ScannerResults, WebsiteScanner} from '../screens';
 
 export type RootTabsParamList = {
   List: undefined;
   WebsiteScanner: WebsiteItem | undefined;
-  ScannedData: undefined;
+  ScannerResults: undefined;
 };
 
 const Tab = createBottomTabNavigator<RootTabsParamList>();
@@ -20,6 +20,6 @@ export const BottomTabsNavigation = () => (
     }}>
     <Tab.Screen name="List" component={List} />
     <Tab.Screen name="WebsiteScanner" component={WebsiteScanner} />
-    <Tab.Screen name="ScannedData" component={List} />
+    <Tab.Screen name="ScannerResults" component={ScannerResults} />
   </Tab.Navigator>
 );

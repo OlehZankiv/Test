@@ -1,4 +1,4 @@
-Task: Create the React Native Application runnable on ios, adapted to mobile screen.
+yarTask: Create the React Native Application runnable on ios, adapted to mobile screen.
 
 Application scans and stores the Copyright information from the predefined list of websites. The Copyright information
 is usually located in the Footer of the website, consisting of © sign. We expect the text, that attached to © sign, to

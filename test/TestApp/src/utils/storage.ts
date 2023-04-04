@@ -1,6 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-export type StorageKey = 'IS_AUTH';
+export type StorageKey = 'IS_AUTH' | 'COPYRITES';
 
 export interface IStorage {
   get: <T>(key: StorageKey, defaultValue: T) => Promise<T>;
