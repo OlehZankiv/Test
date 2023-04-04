@@ -14,7 +14,7 @@ const WebpageItemComponent = ({webpage}: WebpageItemProps) => {
     useNavigation<BottomTabNavigationProp<RootTabsParamList, 'List'>>();
 
   return (
-    <Wrapper onPress={() => navigation.navigate('WebView')}>
+    <Wrapper onPress={() => navigation.navigate('WebsiteScanner', webpage)}>
       <NameText>{webpage.name}</NameText>
       <LinkText>{webpage.url}</LinkText>
     </Wrapper>

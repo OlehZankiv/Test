@@ -1,10 +1,11 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import React from 'react';
-import {List, WebView} from '../screens';
+import {WebsiteItem} from '../api';
+import {List, WebsiteScanner} from '../screens';
 
 export type RootTabsParamList = {
   List: undefined;
-  WebView: undefined;
+  WebsiteScanner: WebsiteItem | undefined;
   ScannedData: undefined;
 };
 
@@ -18,7 +19,7 @@ export const BottomTabsNavigation = () => (
       tabBarHideOnKeyboard: false,
     }}>
     <Tab.Screen name="List" component={List} />
-    <Tab.Screen name="WebView" component={WebView} />
+    <Tab.Screen name="WebsiteScanner" component={WebsiteScanner} />
     <Tab.Screen name="ScannedData" component={List} />
   </Tab.Navigator>
 );
